@@ -3,18 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		F687D29426BF7103007A87E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687D29326BF7103007A87E4 /* AppDelegate.swift */; };
-		F687D29626BF7103007A87E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687D29526BF7103007A87E4 /* SceneDelegate.swift */; };
-		F687D29826BF7103007A87E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687D29726BF7103007A87E4 /* ViewController.swift */; };
-		F687D29B26BF7103007A87E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F687D29926BF7103007A87E4 /* Main.storyboard */; };
 		F687D29D26BF7104007A87E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F687D29C26BF7104007A87E4 /* Assets.xcassets */; };
 		F687D2A026BF7104007A87E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F687D29E26BF7104007A87E4 /* LaunchScreen.storyboard */; };
 		F687D2AB26BF7104007A87E4 /* FlickrRxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687D2AA26BF7104007A87E4 /* FlickrRxTests.swift */; };
 		F687D2B626BF7104007A87E4 /* FlickrRxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687D2B526BF7104007A87E4 /* FlickrRxUITests.swift */; };
+		F687D2CB26BF748B007A87E4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F687D2CA26BF748B007A87E4 /* RxSwift */; };
+		F687D2CF26BF748B007A87E4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F687D2CE26BF748B007A87E4 /* RxRelay */; };
+		F687D2D126BF748B007A87E4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F687D2D026BF748B007A87E4 /* RxCocoa */; };
+		F687D2D326BF748B007A87E4 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = F687D2D226BF748B007A87E4 /* RxBlocking */; };
+		F687D2DC26BF74E4007A87E4 /* XCoordinatorRx in Frameworks */ = {isa = PBXBuildFile; productRef = F687D2DB26BF74E4007A87E4 /* XCoordinatorRx */; };
+		F687D2DE26BF74E4007A87E4 /* XCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = F687D2DD26BF74E4007A87E4 /* XCoordinator */; };
+		F687D2E326BF763F007A87E4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687D2E226BF763F007A87E4 /* AppCoordinator.swift */; };
+		F687D2E826BF789B007A87E4 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687D2E726BF789B007A87E4 /* PhotosViewModel.swift */; };
+		F687D2ED26BF7975007A87E4 /* PhotosViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687D2EC26BF7975007A87E4 /* PhotosViewModelImpl.swift */; };
+		F687D2F326BF7A09007A87E4 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687D2F126BF7A09007A87E4 /* PhotosViewController.swift */; };
+		F687D2F426BF7A09007A87E4 /* PhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F687D2F226BF7A09007A87E4 /* PhotosViewController.xib */; };
+		F687D2F926BF7A6E007A87E4 /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687D2F826BF7A6E007A87E4 /* BindableType.swift */; };
+		F687D2FE26BF7B6A007A87E4 /* NibIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687D2FD26BF7B6A007A87E4 /* NibIdentifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +47,6 @@
 /* Begin PBXFileReference section */
 		F687D29026BF7103007A87E4 /* FlickrRx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrRx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F687D29326BF7103007A87E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F687D29526BF7103007A87E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F687D29726BF7103007A87E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F687D29A26BF7103007A87E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F687D29C26BF7104007A87E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F687D29F26BF7104007A87E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F687D2A126BF7104007A87E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		F687D2B126BF7104007A87E4 /* FlickrRxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrRxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F687D2B526BF7104007A87E4 /* FlickrRxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrRxUITests.swift; sourceTree = "<group>"; };
 		F687D2B726BF7104007A87E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F687D2E226BF763F007A87E4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F687D2E726BF789B007A87E4 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
+		F687D2EC26BF7975007A87E4 /* PhotosViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModelImpl.swift; sourceTree = "<group>"; };
+		F687D2F126BF7A09007A87E4 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		F687D2F226BF7A09007A87E4 /* PhotosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosViewController.xib; sourceTree = "<group>"; };
+		F687D2F826BF7A6E007A87E4 /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
+		F687D2FD26BF7B6A007A87E4 /* NibIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibIdentifiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F687D2CF26BF748B007A87E4 /* RxRelay in Frameworks */,
+				F687D2DC26BF74E4007A87E4 /* XCoordinatorRx in Frameworks */,
+				F687D2D126BF748B007A87E4 /* RxCocoa in Frameworks */,
+				F687D2CB26BF748B007A87E4 /* RxSwift in Frameworks */,
+				F687D2DE26BF74E4007A87E4 /* XCoordinator in Frameworks */,
+				F687D2D326BF748B007A87E4 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +96,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F64BDECB26BF81BF007DE353 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F687D2F826BF7A6E007A87E4 /* BindableType.swift */,
+				F687D2FD26BF7B6A007A87E4 /* NibIdentifiable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F64BDECC26BF81C7007DE353 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F64BDED026BF81E4007DE353 /* Photos */,
+				F64BDECF26BF81DD007DE353 /* PhotoDetail */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F64BDECD26BF81D0007DE353 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				F687D2E226BF763F007A87E4 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		F64BDECE26BF81D6007DE353 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F687D29326BF7103007A87E4 /* AppDelegate.swift */,
+				F687D29E26BF7104007A87E4 /* LaunchScreen.storyboard */,
+				F687D29C26BF7104007A87E4 /* Assets.xcassets */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F64BDECF26BF81DD007DE353 /* PhotoDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoDetail;
+			sourceTree = "<group>";
+		};
+		F64BDED026BF81E4007DE353 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				F687D2E726BF789B007A87E4 /* PhotosViewModel.swift */,
+				F687D2EC26BF7975007A87E4 /* PhotosViewModelImpl.swift */,
+				F687D2F126BF7A09007A87E4 /* PhotosViewController.swift */,
+				F687D2F226BF7A09007A87E4 /* PhotosViewController.xib */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
 		F687D28726BF7103007A87E4 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +173,10 @@
 		F687D29226BF7103007A87E4 /* FlickrRx */ = {
 			isa = PBXGroup;
 			children = (
-				F687D29326BF7103007A87E4 /* AppDelegate.swift */,
-				F687D29526BF7103007A87E4 /* SceneDelegate.swift */,
-				F687D29726BF7103007A87E4 /* ViewController.swift */,
-				F687D29926BF7103007A87E4 /* Main.storyboard */,
-				F687D29C26BF7104007A87E4 /* Assets.xcassets */,
-				F687D29E26BF7104007A87E4 /* LaunchScreen.storyboard */,
+				F64BDECE26BF81D6007DE353 /* Common */,
+				F64BDECD26BF81D0007DE353 /* Coordinators */,
+				F64BDECC26BF81C7007DE353 /* Scenes */,
+				F64BDECB26BF81BF007DE353 /* Utils */,
 				F687D2A126BF7104007A87E4 /* Info.plist */,
 			);
 			path = FlickrRx;
@@ -144,6 +216,14 @@
 			dependencies = (
 			);
 			name = FlickrRx;
+			packageProductDependencies = (
+				F687D2CA26BF748B007A87E4 /* RxSwift */,
+				F687D2CE26BF748B007A87E4 /* RxRelay */,
+				F687D2D026BF748B007A87E4 /* RxCocoa */,
+				F687D2D226BF748B007A87E4 /* RxBlocking */,
+				F687D2DB26BF74E4007A87E4 /* XCoordinatorRx */,
+				F687D2DD26BF74E4007A87E4 /* XCoordinator */,
+			);
 			productName = FlickrRx;
 			productReference = F687D29026BF7103007A87E4 /* FlickrRx.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +295,10 @@
 				Base,
 			);
 			mainGroup = F687D28726BF7103007A87E4;
+			packageReferences = (
+				F687D2C926BF748B007A87E4 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				F687D2DA26BF74E4007A87E4 /* XCRemoteSwiftPackageReference "XCoordinator" */,
+			);
 			productRefGroup = F687D29126BF7103007A87E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,8 +316,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F687D2A026BF7104007A87E4 /* LaunchScreen.storyboard in Resources */,
+				F687D2F426BF7A09007A87E4 /* PhotosViewController.xib in Resources */,
 				F687D29D26BF7104007A87E4 /* Assets.xcassets in Resources */,
-				F687D29B26BF7103007A87E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +342,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F687D29826BF7103007A87E4 /* ViewController.swift in Sources */,
+				F687D2F926BF7A6E007A87E4 /* BindableType.swift in Sources */,
+				F687D2E326BF763F007A87E4 /* AppCoordinator.swift in Sources */,
+				F687D2E826BF789B007A87E4 /* PhotosViewModel.swift in Sources */,
 				F687D29426BF7103007A87E4 /* AppDelegate.swift in Sources */,
-				F687D29626BF7103007A87E4 /* SceneDelegate.swift in Sources */,
+				F687D2F326BF7A09007A87E4 /* PhotosViewController.swift in Sources */,
+				F687D2FE26BF7B6A007A87E4 /* NibIdentifiable.swift in Sources */,
+				F687D2ED26BF7975007A87E4 /* PhotosViewModelImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +384,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F687D29926BF7103007A87E4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F687D29A26BF7103007A87E4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F687D29E26BF7104007A87E4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -587,6 +667,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F687D2C926BF748B007A87E4 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		F687D2DA26BF74E4007A87E4 /* XCRemoteSwiftPackageReference "XCoordinator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quickbirdstudios/XCoordinator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F687D2CA26BF748B007A87E4 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F687D2C926BF748B007A87E4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		F687D2CE26BF748B007A87E4 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F687D2C926BF748B007A87E4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		F687D2D026BF748B007A87E4 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F687D2C926BF748B007A87E4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		F687D2D226BF748B007A87E4 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F687D2C926BF748B007A87E4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		F687D2DB26BF74E4007A87E4 /* XCoordinatorRx */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F687D2DA26BF74E4007A87E4 /* XCRemoteSwiftPackageReference "XCoordinator" */;
+			productName = XCoordinatorRx;
+		};
+		F687D2DD26BF74E4007A87E4 /* XCoordinator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F687D2DA26BF74E4007A87E4 /* XCRemoteSwiftPackageReference "XCoordinator" */;
+			productName = XCoordinator;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F687D28826BF7103007A87E4 /* Project object */;
 }
