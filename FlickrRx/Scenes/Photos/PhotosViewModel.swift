@@ -9,7 +9,7 @@ import RxSwift
 import XCoordinator
 
 protocol PhotosViewModelInput {
-    
+    var searchKeyword: AnyObserver<String> { get }
 }
 
 protocol PhotosViewModelOutput {

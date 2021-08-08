@@ -13,10 +13,22 @@ class PhotosViewModelImpl: PhotosViewModel, PhotosViewModelInput, PhotosViewMode
     private let service: FlickrService
     private let disposeBag = DisposeBag()
     
+    var searchKeyword: AnyObserver<String> {
+        searchAction.asObserver()
+    }
+    private lazy var searchAction = PublishSubject<String>()
+    
     init(service: FlickrService) {
         self.service = service
         
-        self.service.photoSearch(for: "abc").bind { (page) in
+        searchAction.subscribe(onNext: { [unowned self] (keyword) in
+            self.fetchPhotos(for: keyword)
+        })
+        .disposed(by: disposeBag)
+    }
+    
+    private func fetchPhotos(for keyword: String) {
+        service.photoSearch(for: keyword).bind { (page) in
             page.photos.forEach { (photo) in
                 print("Photo: \(photo.title)")
             }
