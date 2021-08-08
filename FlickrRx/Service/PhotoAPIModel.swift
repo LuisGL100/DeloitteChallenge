@@ -38,4 +38,10 @@ struct PhotoAPIModel: Decodable {
     let server: String
     let farm: Int
     let title: String
+    
+    var url: URL? {
+        let strUrl = "http://farm\(farm).static.flickr.com/\(server)/\(id)_\(secret).jpg"
+        guard let url = URL(string: strUrl) else { return nil }
+        return url
+    }
 }

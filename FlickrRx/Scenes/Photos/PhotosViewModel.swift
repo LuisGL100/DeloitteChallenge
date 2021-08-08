@@ -13,7 +13,7 @@ protocol PhotosViewModelInput {
 }
 
 protocol PhotosViewModelOutput {
-    
+    var dataSource: Observable<[Photo]> { get }
 }
 
 protocol PhotosViewModel {

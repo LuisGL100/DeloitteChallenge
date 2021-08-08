@@ -18,20 +18,27 @@ class PhotosViewModelImpl: PhotosViewModel, PhotosViewModelInput, PhotosViewMode
     }
     private lazy var searchAction = PublishSubject<String>()
     
+    var dataSource: Observable<[Photo]> {
+        photos.asObservable()
+    }
+    private lazy var photos = PublishSubject<[Photo]>()
+    
     init(service: FlickrService) {
         self.service = service
         
-        searchAction.subscribe(onNext: { [unowned self] (keyword) in
-            self.fetchPhotos(for: keyword)
+        searchAction.subscribe(onNext: { [weak self] (keyword) in
+            self?.fetchPhotos(for: keyword)
         })
         .disposed(by: disposeBag)
     }
     
     private func fetchPhotos(for keyword: String) {
-        service.photoSearch(for: keyword).bind { (page) in
-            page.photos.forEach { (photo) in
+        service.photoSearch(for: keyword).bind { [weak self] (page) in
+            let photos: [Photo] = page.photos.compactMap { (photo) in
                 print("Photo: \(photo.title)")
+                return photo.toPhoto()
             }
+            self?.photos.onNext(photos)
         }
         .disposed(by: disposeBag)
     }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F62FC49726C00A3600A37F82 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62FC49626C00A3600A37F82 /* Photo.swift */; };
+		F62FC4A026C0160100A37F82 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62FC49F26C0160100A37F82 /* PhotoCell.swift */; };
+		F62FC4AA26C018AF00A37F82 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F62FC4A926C018AF00A37F82 /* Kingfisher */; };
 		F64BDEE626BF8EDE007DE353 /* FlickrService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64BDEE526BF8EDE007DE353 /* FlickrService.swift */; };
 		F64BDEEE26BF922C007DE353 /* PhotoAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64BDEED26BF922C007DE353 /* PhotoAPIModel.swift */; };
 		F64BDEF826BFAA91007DE353 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64BDEF726BFAA91007DE353 /* Environment.swift */; };
@@ -48,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F62FC49626C00A3600A37F82 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		F62FC49F26C0160100A37F82 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		F64BDEE526BF8EDE007DE353 /* FlickrService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrService.swift; sourceTree = "<group>"; };
 		F64BDEED26BF922C007DE353 /* PhotoAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPIModel.swift; sourceTree = "<group>"; };
 		F64BDEF326BFA9A2007DE353 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -79,6 +84,7 @@
 			files = (
 				F687D2CF26BF748B007A87E4 /* RxRelay in Frameworks */,
 				F687D2DC26BF74E4007A87E4 /* XCoordinatorRx in Frameworks */,
+				F62FC4AA26C018AF00A37F82 /* Kingfisher in Frameworks */,
 				F687D2D126BF748B007A87E4 /* RxCocoa in Frameworks */,
 				F687D2CB26BF748B007A87E4 /* RxSwift in Frameworks */,
 				F687D2DE26BF74E4007A87E4 /* XCoordinator in Frameworks */,
@@ -103,6 +109,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F62FC49526C00A2400A37F82 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F62FC49626C00A3600A37F82 /* Photo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F62FC49E26C015E400A37F82 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F62FC49F26C0160100A37F82 /* PhotoCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F64BDECB26BF81BF007DE353 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,9 +215,11 @@
 			children = (
 				F64BDECE26BF81D6007DE353 /* Common */,
 				F64BDECD26BF81D0007DE353 /* Coordinators */,
+				F62FC49526C00A2400A37F82 /* Models */,
 				F64BDECC26BF81C7007DE353 /* Scenes */,
 				F64BDEE426BF8EB3007DE353 /* Service */,
 				F64BDECB26BF81BF007DE353 /* Utils */,
+				F62FC49E26C015E400A37F82 /* Views */,
 				F687D2A126BF7104007A87E4 /* Info.plist */,
 			);
 			path = FlickrRx;
@@ -242,6 +266,7 @@
 				F687D2D226BF748B007A87E4 /* RxBlocking */,
 				F687D2DB26BF74E4007A87E4 /* XCoordinatorRx */,
 				F687D2DD26BF74E4007A87E4 /* XCoordinator */,
+				F62FC4A926C018AF00A37F82 /* Kingfisher */,
 			);
 			productName = FlickrRx;
 			productReference = F687D29026BF7103007A87E4 /* FlickrRx.app */;
@@ -317,6 +342,7 @@
 			packageReferences = (
 				F687D2C926BF748B007A87E4 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				F687D2DA26BF74E4007A87E4 /* XCRemoteSwiftPackageReference "XCoordinator" */,
+				F62FC4A826C018AF00A37F82 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = F687D29126BF7103007A87E4 /* Products */;
 			projectDirPath = "";
@@ -365,9 +391,11 @@
 				F687D2E326BF763F007A87E4 /* AppCoordinator.swift in Sources */,
 				F64BDEE626BF8EDE007DE353 /* FlickrService.swift in Sources */,
 				F64BDEEE26BF922C007DE353 /* PhotoAPIModel.swift in Sources */,
+				F62FC4A026C0160100A37F82 /* PhotoCell.swift in Sources */,
 				F687D2E826BF789B007A87E4 /* PhotosViewModel.swift in Sources */,
 				F687D29426BF7103007A87E4 /* AppDelegate.swift in Sources */,
 				F687D2F326BF7A09007A87E4 /* PhotosViewController.swift in Sources */,
+				F62FC49726C00A3600A37F82 /* Photo.swift in Sources */,
 				F687D2FE26BF7B6A007A87E4 /* NibIdentifiable.swift in Sources */,
 				F687D2ED26BF7975007A87E4 /* PhotosViewModelImpl.swift in Sources */,
 				F64BDEF826BFAA91007DE353 /* Environment.swift in Sources */,
@@ -695,6 +723,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F62FC4A826C018AF00A37F82 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.1;
+			};
+		};
 		F687D2C926BF748B007A87E4 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -714,6 +750,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F62FC4A926C018AF00A37F82 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F62FC4A826C018AF00A37F82 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		F687D2CA26BF748B007A87E4 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F687D2C926BF748B007A87E4 /* XCRemoteSwiftPackageReference "RxSwift" */;
