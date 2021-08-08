@@ -10,6 +10,7 @@ import XCoordinator
 
 protocol PhotosViewModelInput {
     var searchKeyword: AnyObserver<String> { get }
+    var isNearBottom: AnyObserver<Bool> { get }
 }
 
 protocol PhotosViewModelOutput {

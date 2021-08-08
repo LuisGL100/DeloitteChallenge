@@ -48,9 +48,25 @@ extension PhotosViewController: BindableType {
         
         viewModel.output.dataSource
             .bind(to: collectionView.rx.items(cellIdentifier: PhotoCell.reuseIdentifier, cellType: PhotoCell.self)) { (row, element, cell) in
-                cell.imageView?.kf.setImage(with: element.url)
+                cell.imageView?.kf.setImage(with: element.url, placeholder: UIImage(systemName: "hare"), options: [.scaleFactor(UIScreen.main.scale), .cacheOriginalImage])
+                cell.imageView?.contentMode = .scaleAspectFit
             }
             .disposed(by: disposeBag)
+        
+        viewModel.output.dataSource.subscribe(onNext: { [weak self] _ in
+            self?.collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: false)
+        })
+        .disposed(by: disposeBag)
+        
+        collectionView.rx.contentOffset.flatMap { [weak self] (offset) -> Observable<Bool> in
+            guard let collectionView = self?.collectionView else { return Observable.empty() }
+            let contentSizeHeight = collectionView.contentSize.height
+            let shouldTrigger = (contentSizeHeight > 0) && (offset.y + collectionView.bounds.height + 50 > contentSizeHeight)
+            return shouldTrigger ? Observable.just(true) : Observable.empty()
+        }
+        .debounce(.milliseconds(100), scheduler: MainScheduler.instance)
+        .bind(to: viewModel.input.isNearBottom)
+        .disposed(by: disposeBag)
     }
 }
 

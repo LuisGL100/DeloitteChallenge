@@ -16,29 +16,56 @@ class PhotosViewModelImpl: PhotosViewModel, PhotosViewModelInput, PhotosViewMode
     var searchKeyword: AnyObserver<String> {
         searchAction.asObserver()
     }
-    private lazy var searchAction = PublishSubject<String>()
+    private lazy var searchAction = BehaviorSubject<String>(value: "")
+    
+    private lazy var blah = BehaviorSubject<String>(value: "")
+    
+    var isNearBottom: AnyObserver<Bool> {
+        loadNextPage.asObserver()
+    }
+    private lazy var loadNextPage = PublishSubject<Bool>()
     
     var dataSource: Observable<[Photo]> {
         photos.asObservable()
     }
     private lazy var photos = PublishSubject<[Photo]>()
     
+    private var page: PageAPIModel?
+    
     init(service: FlickrService) {
         self.service = service
         
-        searchAction.subscribe(onNext: { [weak self] (keyword) in
-            self?.fetchPhotos(for: keyword)
+        searchAction.skip(1).subscribe(onNext: { [weak self] (keyword) in
+            self?.fetchPhotos(for: keyword, page: 1)
         })
         .disposed(by: disposeBag)
+        
+        loadNextPage
+            .distinctUntilChanged()
+            .observeOn(MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] (load) in
+                guard let self = self, load else { return }
+                print("Load next page: \(load)")
+                let pageToLoad: UInt
+                if let page = self.page {
+                    pageToLoad = UInt(page.number + 1)
+                } else {
+                    pageToLoad = 1
+                }
+                let keyword = try! self.searchAction.value()
+                self.fetchPhotos(for: keyword, page: pageToLoad)
+            })
+            .disposed(by: disposeBag)
     }
     
-    private func fetchPhotos(for keyword: String) {
-        service.photoSearch(for: keyword).bind { [weak self] (page) in
+    private func fetchPhotos(for keyword: String, page: UInt) {
+        service.photoSearch(for: keyword, page: page).bind { [weak self] (page) in
             let photos: [Photo] = page.photos.compactMap { (photo) in
-                print("Photo: \(photo.title)")
                 return photo.toPhoto()
             }
+            self?.page = page
             self?.photos.onNext(photos)
+            self?.loadNextPage.onNext(false)
         }
         .disposed(by: disposeBag)
     }
