@@ -22,7 +22,7 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
         switch route {
         case .photos:
             let viewController = PhotosViewController.instantiateFromNib()
-            let viewModel = PhotosViewModelImpl()
+            let viewModel = PhotosViewModelImpl(service: FlickrServiceImpl())
             viewController.bind(to: viewModel)
             return .push(viewController)
         case .photoDetail: fatalError()

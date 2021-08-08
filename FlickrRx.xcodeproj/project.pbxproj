@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F64BDEE626BF8EDE007DE353 /* FlickrService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64BDEE526BF8EDE007DE353 /* FlickrService.swift */; };
+		F64BDEEE26BF922C007DE353 /* PhotoAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64BDEED26BF922C007DE353 /* PhotoAPIModel.swift */; };
+		F64BDEF826BFAA91007DE353 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64BDEF726BFAA91007DE353 /* Environment.swift */; };
 		F687D29426BF7103007A87E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687D29326BF7103007A87E4 /* AppDelegate.swift */; };
 		F687D29D26BF7104007A87E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F687D29C26BF7104007A87E4 /* Assets.xcassets */; };
 		F687D2A026BF7104007A87E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F687D29E26BF7104007A87E4 /* LaunchScreen.storyboard */; };
@@ -45,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F64BDEE526BF8EDE007DE353 /* FlickrService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrService.swift; sourceTree = "<group>"; };
+		F64BDEED26BF922C007DE353 /* PhotoAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPIModel.swift; sourceTree = "<group>"; };
+		F64BDEF326BFA9A2007DE353 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		F64BDEF726BFAA91007DE353 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		F687D29026BF7103007A87E4 /* FlickrRx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrRx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F687D29326BF7103007A87E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F687D29C26BF7104007A87E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,8 +133,10 @@
 			isa = PBXGroup;
 			children = (
 				F687D29326BF7103007A87E4 /* AppDelegate.swift */,
+				F64BDEF726BFAA91007DE353 /* Environment.swift */,
 				F687D29E26BF7104007A87E4 /* LaunchScreen.storyboard */,
 				F687D29C26BF7104007A87E4 /* Assets.xcassets */,
+				F64BDEF326BFA9A2007DE353 /* Config.xcconfig */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -148,6 +157,15 @@
 				F687D2F226BF7A09007A87E4 /* PhotosViewController.xib */,
 			);
 			path = Photos;
+			sourceTree = "<group>";
+		};
+		F64BDEE426BF8EB3007DE353 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F64BDEE526BF8EDE007DE353 /* FlickrService.swift */,
+				F64BDEED26BF922C007DE353 /* PhotoAPIModel.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		F687D28726BF7103007A87E4 = {
@@ -176,6 +194,7 @@
 				F64BDECE26BF81D6007DE353 /* Common */,
 				F64BDECD26BF81D0007DE353 /* Coordinators */,
 				F64BDECC26BF81C7007DE353 /* Scenes */,
+				F64BDEE426BF8EB3007DE353 /* Service */,
 				F64BDECB26BF81BF007DE353 /* Utils */,
 				F687D2A126BF7104007A87E4 /* Info.plist */,
 			);
@@ -344,11 +363,14 @@
 			files = (
 				F687D2F926BF7A6E007A87E4 /* BindableType.swift in Sources */,
 				F687D2E326BF763F007A87E4 /* AppCoordinator.swift in Sources */,
+				F64BDEE626BF8EDE007DE353 /* FlickrService.swift in Sources */,
+				F64BDEEE26BF922C007DE353 /* PhotoAPIModel.swift in Sources */,
 				F687D2E826BF789B007A87E4 /* PhotosViewModel.swift in Sources */,
 				F687D29426BF7103007A87E4 /* AppDelegate.swift in Sources */,
 				F687D2F326BF7A09007A87E4 /* PhotosViewController.swift in Sources */,
 				F687D2FE26BF7B6A007A87E4 /* NibIdentifiable.swift in Sources */,
 				F687D2ED26BF7975007A87E4 /* PhotosViewModelImpl.swift in Sources */,
+				F64BDEF826BFAA91007DE353 /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +419,7 @@
 /* Begin XCBuildConfiguration section */
 		F687D2B826BF7104007A87E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F64BDEF326BFA9A2007DE353 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -458,6 +481,7 @@
 		};
 		F687D2B926BF7104007A87E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F64BDEF326BFA9A2007DE353 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -513,6 +537,7 @@
 		};
 		F687D2BB26BF7104007A87E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F64BDEF326BFA9A2007DE353 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -531,6 +556,7 @@
 		};
 		F687D2BC26BF7104007A87E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F64BDEF326BFA9A2007DE353 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
